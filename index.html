@@ -1,8 +1,20 @@
 <html>
 <head>
 <title>LOOK AT THIS GUY</title>
+<script type="text/javascript" language="JavaScript">
+  NumberOfImagesToRotate = 2;
+  FirstPart = '<img src="bgimage';
+  LastPart = '.jpg" style="width: 100%; position: absolute; top: 0; left: 0;" />';
+
+  function printImage() {
+    var r = Math.ceil(Math.random() * NumberOfImagesToRotate);
+    document.write(FirstPart + r + LastPart);
+  }
+</script>
 </head>
 <body bgcolor="#563c2d">
-<img class="source-image" src="bgimage.jpg" style="width: 100%; position: absolute; top: 0; left: 0;" alt="" />
+<script type="text/javascript" language="JavaScript">
+  printImage();
+</script>
 </body>
 </html>
