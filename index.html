@@ -3,12 +3,20 @@
 <title>LOOK AT THIS GUY</title>
 <script type="text/javascript" language="JavaScript">
   NumberOfImagesToRotate = 5;
-  FirstPart = '<img src="bgimage';
-  LastPart = '.jpg" style="width: 100%; position: absolute; top: 0; left: 0;" />';
+  NumberOfVideosToRotate = 1;
 
   function printImage() {
-    var r = Math.ceil(Math.random() * NumberOfImagesToRotate);
-    document.write(FirstPart + r + LastPart);
+    var r = Math.ceil(Math.random() * (NumberOfImagesToRotate + NumberOfVideosToRotate));
+
+    if (r > NumberOfImagesToRotate) {
+      FirstPart = '<video style="width: 100%;" autoplay><source src="video';
+      LastPart = '.mov">Your browser does not support the video tag.</video>';
+      document.write(FirstPart + (r - NumberOfImagesToRotate) + LastPart);
+    } else {
+      FirstPart = '<img src="bgimage';
+      LastPart = '.jpg" style="width: 100%; position: absolute; top: 0; left: 0;" />';
+      document.write(FirstPart + r + LastPart);
+    }
   }
 </script>
 </head>
