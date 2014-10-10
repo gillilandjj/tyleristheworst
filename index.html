@@ -9,7 +9,7 @@
     var r = Math.ceil(Math.random() * (NumberOfImagesToRotate + NumberOfVideosToRotate));
 
     if (r > NumberOfImagesToRotate) {
-      FirstPart = '<video style="width: 100%;" autoplay><source src="video';
+      FirstPart = '<video style="width: 100%;" autoplay controls><source src="video';
       LastPart = '.mov">Your browser does not support the video tag.</video>';
       document.write(FirstPart + (r - NumberOfImagesToRotate) + LastPart);
     } else {
